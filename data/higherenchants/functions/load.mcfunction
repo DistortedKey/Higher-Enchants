@@ -3,7 +3,7 @@ scoreboard objectives add mendinglvl dummy
 scoreboard objectives add unbreakinglvl dummy
 scoreboard objectives add aquaAffinitylvl dummy
 scoreboard objectives add blastProtectionlvl dummy
-scoreboard objectives add depthStriderlvl dummy
+scoreboard objectives add frostWalkerlvl dummy
 scoreboard objectives add featherFallinglvl dummy
 scoreboard objectives add fireProtectionlvl dummy
 scoreboard objectives add projectileProtectionlvl dummy
@@ -43,7 +43,7 @@ scoreboard players set max mendinglvl 10
 scoreboard players set max unbreakinglvl 10
 scoreboard players set max aquaAffinitylvl 10
 scoreboard players set max blastProtectionlvl 10
-scoreboard players set max depthStriderlvl 10
+scoreboard players set max frostWalkerlvl 10
 scoreboard players set max featherFallinglvl 10
 scoreboard players set max fireProtectionlvl 10
 scoreboard players set max projectileProtectionlvl 10
@@ -88,7 +88,7 @@ scoreboard objectives add itemId dummy
 scoreboard objectives add curseOfVanishinglvl dummy
 scoreboard objectives add curseOfBindinglvl dummy
 scoreboard objectives add depthStriderlvl dummy
-scoreboard objectives add frostWalkerlvl dummy
+scoreboard players set max depthStriderlvl 3
 scoreboard objectives add infinitylvl dummy
 scoreboard objectives add multishotlvl dummy
 scoreboard objectives add silkTouchlvl dummy

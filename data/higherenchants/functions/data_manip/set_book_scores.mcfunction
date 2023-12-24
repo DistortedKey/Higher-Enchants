@@ -7,7 +7,7 @@ execute as @s store result score @s unbreakinglvl run data get entity @s Item.ta
 # armor enchants
 execute as @s store result score @s aquaAffinitylvl run data get entity @s Item.tag.StoredEnchantments[{id:"minecraft:aqua_affinity"}].lvl
 execute as @s store result score @s blastProtectionlvl run data get entity @s Item.tag.StoredEnchantments[{id:"minecraft:blast_protection"}].lvl
-execute as @s store result score @s depthStriderlvl run data get entity @s Item.tag.StoredEnchantments[{id:"minecraft:depth_strider"}].lvl
+execute as @s store result score @s frostWalkerlvl run data get entity @s Item.tag.StoredEnchantments[{id:"minecraft:frost_walker"}].lvl
 execute as @s store result score @s featherFallinglvl run data get entity @s Item.tag.StoredEnchantments[{id:"minecraft:feather_falling"}].lvl
 execute as @s store result score @s fireProtectionlvl run data get entity @s Item.tag.StoredEnchantments[{id:"minecraft:fire_protection"}].lvl
 execute as @s store result score @s projectileProtectionlvl run data get entity @s Item.tag.StoredEnchantments[{id:"minecraft:projectile_protection"}].lvl

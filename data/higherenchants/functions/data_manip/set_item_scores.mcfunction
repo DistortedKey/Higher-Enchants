@@ -7,7 +7,7 @@ execute as @s store result score @s unbreakinglvl run data get entity @s Item.ta
 # armor enchants
 execute as @s store result score @s aquaAffinitylvl run data get entity @s Item.tag.Enchantments[{id:"minecraft:aqua_affinity"}].lvl
 execute as @s store result score @s blastProtectionlvl run data get entity @s Item.tag.Enchantments[{id:"minecraft:blast_protection"}].lvl
-execute as @s store result score @s depthStriderlvl run data get entity @s Item.tag.Enchantments[{id:"minecraft:depth_strider"}].lvl
+execute as @s store result score @s frostWalkerlvl run data get entity @s Item.tag.Enchantments[{id:"minecraft:frost_walker"}].lvl
 execute as @s store result score @s featherFallinglvl run data get entity @s Item.tag.Enchantments[{id:"minecraft:feather_falling"}].lvl
 execute as @s store result score @s fireProtectionlvl run data get entity @s Item.tag.Enchantments[{id:"minecraft:fire_protection"}].lvl
 execute as @s store result score @s projectileProtectionlvl run data get entity @s Item.tag.Enchantments[{id:"minecraft:projectile_protection"}].lvl
@@ -48,10 +48,13 @@ execute as @s store result score @s lurelvl run data get entity @s Item.tag.Ench
 execute as @s store result score @s curseOfVanishinglvl run data get entity @s Item.tag.Enchantments[{id:"minecraft:vanishing_curse"}].lvl
 execute as @s store result score @s curseOfBindinglvl run data get entity @s Item.tag.Enchantments[{id:"minecraft:binding_curse"}].lvl
 execute as @s store result score @s depthStriderlvl run data get entity @s Item.tag.Enchantments[{id:"minecraft:depth_strider"}].lvl
-execute as @s store result score @s frostWalkerlvl run data get entity @s Item.tag.Enchantments[{id:"minecraft:frost_walker"}].lvl
+
 execute as @s store result score @s infinitylvl run data get entity @s Item.tag.Enchantments[{id:"minecraft:infinity"}].lvl
 execute as @s store result score @s multishotlvl run data get entity @s Item.tag.Enchantments[{id:"minecraft:multishot"}].lvl
 execute as @s store result score @s silkTouchlvl run data get entity @s Item.tag.Enchantments[{id:"minecraft:silk_touch"}].lvl
+
+# unsupported
+execute as @s store result score @s depthStriderlvl run data get entity @s Item.tag.Enchantments[{id:"minecraft:depth_strider"}].lvl
 
 
 # set identifiers for non compatible enchants(if they have one, tag them stating so)
@@ -60,6 +63,5 @@ execute as @s unless entity @s[scores={riptidelvl=..0}] run tag @s add riptide
 
 execute as @s unless entity @s[scores={fortunelvl=..0}] run tag @s add fortune
 execute as @s unless entity @s[scores={silkTouchlvl=..0}] run tag @s add silk
-
 execute as @s unless entity @s[scores={frostWalkerlvl=..0}] run tag @s add frost
 execute as @s unless entity @s[scores={depthStriderlvl=..0}] run tag @s add depth
