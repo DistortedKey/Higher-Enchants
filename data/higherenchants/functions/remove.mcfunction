@@ -40,6 +40,8 @@ scoreboard objectives remove rule
 
 scoreboard objectives remove itemId
 
+scoreboard objectives remove XP
+
 scoreboard objectives remove curseOfVanishinglvl
 scoreboard objectives remove curseOfBindinglvl
 scoreboard objectives remove depthStriderlvl
