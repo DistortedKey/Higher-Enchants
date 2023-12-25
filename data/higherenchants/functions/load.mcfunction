@@ -84,6 +84,10 @@ scoreboard players set dragon_head rule 1
 # objective to hold item ids
 scoreboard objectives add itemId dummy
 
+# objective to store xp requirement
+scoreboard objectives add XP dummy
+scoreboard players set zero XP 0
+
 # non higher enchantment objectives
 scoreboard objectives add curseOfVanishinglvl dummy
 scoreboard objectives add curseOfBindinglvl dummy
