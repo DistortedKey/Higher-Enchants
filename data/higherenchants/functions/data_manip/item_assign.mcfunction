@@ -153,7 +153,7 @@ execute as @s unless entity @s[tag=!sword,tag=!axe,nbt=!{Item:{id:"minecraft:tri
 # tag tool items(for efficiancy, fortune, silk)
 execute as @s unless entity @s[tag=!hoe,tag=!axe,tag=!pickaxe,tag=!shovel] run tag @s add tool
 # tag items that can be enchanted with mending and unbreaking
-execute as @s unless entity @s[tag=!sword,tag=!axe,tag=!pickaxe,tag=!armor,tag=!shovel,tag=!hoe,tag=!bow,nbt=!{Item:{id:"minecraft:flint_and_steel"}},nbt=!{Item:{id:"minecraft:fishing_rod"}},nbt=!{Item:{id:"minecraft:carrot_on_a_stick"}},nbt=!{Item:{id:"minecraft:shears"}},nbt=!{Item:{id:"minecraft:shield"}},nbt=!{Item:{id:"minecraft:trident"}}] run tag @s add universal
+execute as @s unless entity @s[tag=!sword,tag=!axe,tag=!pickaxe,tag=!armor,tag=!shovel,tag=!hoe,tag=!bow,tag=!crossbow,nbt=!{Item:{id:"minecraft:flint_and_steel"}},nbt=!{Item:{id:"minecraft:fishing_rod"}},nbt=!{Item:{id:"minecraft:carrot_on_a_stick"}},nbt=!{Item:{id:"minecraft:shears"}},nbt=!{Item:{id:"minecraft:shield"}},nbt=!{Item:{id:"minecraft:trident"}}] run tag @s add universal
 
 # if an item is already tagged, then this one is the second
 execute as @s if entity @s[tag=universal] at @s if score @e[distance=.0001..1.5,tag=item,limit=1,sort=nearest] itemId = @s itemId run tag @s add second_item
