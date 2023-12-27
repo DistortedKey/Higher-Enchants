@@ -79,7 +79,10 @@ scoreboard players set max lurelvl 5
 
 # objective for rules
 scoreboard objectives add rule dummy
-scoreboard players set dragon_head rule 1
+scoreboard players set true rule 1
+execute unless score dragon_head rule < true rule run scoreboard players set dragon_head rule 1
+execute unless score charge_xp rule < true rule run scoreboard players set charge_xp rule 1
+
 
 # objective to hold item ids
 scoreboard objectives add itemId dummy
