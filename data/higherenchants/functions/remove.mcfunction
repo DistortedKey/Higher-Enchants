@@ -47,3 +47,6 @@ scoreboard objectives remove frostWalkerlvl
 scoreboard objectives remove infinitylvl
 scoreboard objectives remove multishotlvl
 scoreboard objectives remove silkTouchlvl
+
+scoreboard objectives remove XP
+scoreboard objectives remove zero

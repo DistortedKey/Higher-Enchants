@@ -37,51 +37,9 @@ scoreboard objectives add fortunelvl dummy
 scoreboard objectives add luckOfTheSealvl dummy
 scoreboard objectives add lurelvl dummy
 
-
-# initialize max levels
-scoreboard players set max mendinglvl 10
-scoreboard players set max unbreakinglvl 10
-scoreboard players set max aquaAffinitylvl 10
-scoreboard players set max blastProtectionlvl 10
-scoreboard players set max frostWalkerlvl 10
-scoreboard players set max featherFallinglvl 10
-scoreboard players set max fireProtectionlvl 10
-scoreboard players set max projectileProtectionlvl 10
-scoreboard players set max protectionlvl 10
-scoreboard players set max respirationlvl 10
-scoreboard players set max soulSpeedlvl 10
-scoreboard players set max thornslvl 10
-scoreboard players set max swiftSneaklvl 10
-
-scoreboard players set max baneOfArthropodslvl 10
-scoreboard players set max efficiencylvl 10
-scoreboard players set max fireAspectlvl 10
-scoreboard players set max lootinglvl 10
-scoreboard players set max impalinglvl 10
-scoreboard players set max knockbacklvl 10
-scoreboard players set max sharpnesslvl 10
-scoreboard players set max smitelvl 10
-scoreboard players set max sweepingEdgelvl 10
-
-scoreboard players set max channelinglvl 2
-scoreboard players set max flamelvl 10
-scoreboard players set max impalinglvl 10
-scoreboard players set max loyaltylvl 10
-scoreboard players set max riptidelvl 10
-scoreboard players set max piercinglvl 10
-scoreboard players set max powerlvl 10
-scoreboard players set max punchlvl 10
-scoreboard players set max quickChargelvl 5
-
-scoreboard players set max fortunelvl 10
-scoreboard players set max luckOfTheSealvl 10
-scoreboard players set max lurelvl 5
-
 # objective for rules
 scoreboard objectives add rule dummy
 scoreboard players set true rule 1
-execute unless score dragon_head rule < true rule run scoreboard players set dragon_head rule 1
-execute unless score charge_xp rule < true rule run scoreboard players set charge_xp rule 1
 
 
 # objective to hold item ids
@@ -90,6 +48,8 @@ scoreboard objectives add itemId dummy
 # objective to store xp requirement
 scoreboard objectives add XP dummy
 scoreboard players set zero XP 0
+
+execute unless score init XP matches 1 run function higherenchants:starters/initialize_max
 
 # non higher enchantment objectives
 scoreboard objectives add curseOfVanishinglvl dummy
