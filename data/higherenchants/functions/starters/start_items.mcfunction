@@ -23,7 +23,7 @@ execute as @s at @s unless score charge_xp rule = true rule unless score @s XP =
 execute as @s at @s unless score charge_xp rule = true rule unless score @s XP = zero XP run function higherenchants:data_manip/enchant_item
 
 # if xp system rule(charge_xp) is enabled, charge the xp
-execute as @s at @s if score charge_xp rule = true rule unless score @s XP = zero XP if score @s XP <= @p XP run function higherenchants:data_manip/update_levels
+execute as @s at @s if score charge_xp rule = true rule unless score @s XP = zero XP if score @s XP <= @p XP run function higherenchants:data_manip/charge_xp
 
 # if player doesnt have enough xp, fail
 execute as @s at @s if score charge_xp rule = true rule unless score @s XP <= @p XP run function higherenchants:insufficiant_xp
