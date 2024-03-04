@@ -1,9 +1,6 @@
-# if there is already an inital item within the valid distance, mark current book as the second item
-execute as @e[type=item,tag=!assigned,nbt={Item:{id:"minecraft:enchanted_book"}}] at @s if block ~ ~-.2 ~ anvil if entity @e[type=item,distance=.001..1.5,tag=book] run tag @s add second
-execute as @e[type=item,nbt={Item:{id:"minecraft:enchanted_book"}}] at @s if block ~ ~-.2 ~ anvil if entity @e[type=item,distance=.001..1.5,tag=item] run tag @s add second
-
-# Tag all untagged items on anvils
-execute as @e[type=item,tag=!assigned] at @s if block ~ ~-.2 ~ anvil run function higherenchants:data_manip/item_assign
+execute as @e[type=item] at @s if block ~ ~-.2 ~ anvil run function higherenchants:starters/start_tags
+execute as @e[type=item] at @s if block ~ ~-.2 ~ chipped_anvil run function higherenchants:starters/start_tags
+execute as @e[type=item] at @s if block ~ ~-.2 ~ damaged_anvil run function higherenchants:starters/start_tags
 
 # if there is a book with a second book within range, enchant with two books
 execute as @e[type=item,tag=book,tag=!started] at @s if entity @e[type=item,distance=.001..1.5,tag=second,tag=!second_item] run function higherenchants:starters/start_books
