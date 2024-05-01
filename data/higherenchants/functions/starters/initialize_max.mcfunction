@@ -38,6 +38,6 @@ scoreboard players set max luckOfTheSealvl 10
 scoreboard players set max lurelvl 5
 
 scoreboard players set charge_xp rule 1
-scoreboard players set dragon_head rule 1
+scoreboard players set mob_head rule 1
 
 scoreboard players set init XP 1

@@ -1,0 +1,1 @@
+scoreboard players set #echo Echo 2

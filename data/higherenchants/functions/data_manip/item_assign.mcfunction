@@ -87,10 +87,21 @@ execute as @s[nbt={Item:{id:"minecraft:netherite_helmet"}}] run scoreboard playe
 execute as @s[nbt={Item:{id:"minecraft:turtle_helmet"}}] run tag @s add helmet
 execute as @s[nbt={Item:{id:"minecraft:turtle_helmet"}}] run scoreboard players set @s itemId 37
 
-# if dragon head rule is enabled, add it to helmets
-execute as @s run scoreboard players set @s rule 0
-execute as @s[nbt={Item:{id:"minecraft:dragon_head"}}] if score dragon_head rule > @s rule run tag @s add helmet
-execute as @s[nbt={Item:{id:"minecraft:dragon_head"}}] if score dragon_head rule > @s rule run scoreboard players set @s itemId 38
+# if mob_head rule is enabled, add it to helmets
+execute as @s[nbt={Item:{id:"minecraft:dragon_head"}}] if score mob_head rule matches 1 run tag @s add helmet
+execute as @s[nbt={Item:{id:"minecraft:dragon_head"}}] if score mob_head rule matches 1 run scoreboard players set @s itemId 38
+execute as @s[nbt={Item:{id:"minecraft:player_head"}}] if score mob_head rule matches 1 run tag @s add helmet
+execute as @s[nbt={Item:{id:"minecraft:player_head"}}] if score mob_head rule matches 1 run scoreboard players set @s itemId 62
+execute as @s[nbt={Item:{id:"minecraft:zombie_head"}}] if score mob_head rule matches 1 run tag @s add helmet
+execute as @s[nbt={Item:{id:"minecraft:zombie_head"}}] if score mob_head rule matches 1 run scoreboard players set @s itemId 63
+execute as @s[nbt={Item:{id:"minecraft:creeper_head"}}] if score mob_head rule matches 1 run tag @s add helmet
+execute as @s[nbt={Item:{id:"minecraft:creeper_head"}}] if score mob_head rule matches 1 run scoreboard players set @s itemId 64
+execute as @s[nbt={Item:{id:"minecraft:piglin_head"}}] if score mob_head rule matches 1 run tag @s add helmet
+execute as @s[nbt={Item:{id:"minecraft:piglin_head"}}] if score mob_head rule matches 1 run scoreboard players set @s itemId 65
+execute as @s[nbt={Item:{id:"minecraft:skeleton_skull"}}] if score mob_head rule matches 1 run tag @s add helmet
+execute as @s[nbt={Item:{id:"minecraft:skeleton_skull"}}] if score mob_head rule matches 1 run scoreboard players set @s itemId 66
+execute as @s[nbt={Item:{id:"minecraft:wither_skeleton_skull"}}] if score mob_head rule matches 1 run tag @s add helmet
+execute as @s[nbt={Item:{id:"minecraft:wither_skeleton_skull"}}] if score mob_head rule matches 1 run scoreboard players set @s itemId 67
 
 #chest gear
 execute as @s[nbt={Item:{id:"minecraft:leather_chestplate"}}] run tag @s add chestplate
@@ -144,6 +155,8 @@ execute as @s[nbt={Item:{id:"minecraft:crossbow"}}] run scoreboard players set @
 execute as @s[nbt={Item:{id:"minecraft:enchanted_book"}}] run tag @s add book
 execute as @s[nbt={Item:{id:"minecraft:enchanted_book"}}] run scoreboard players set @s itemId 60
 
+
+execute as @s[nbt={Item:{id:"minecraft:trident"}}] run scoreboard players set @s itemId 61
 
 
 # tag armors for prot, thorns etc

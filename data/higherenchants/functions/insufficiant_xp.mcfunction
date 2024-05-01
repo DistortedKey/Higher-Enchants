@@ -1,3 +1,3 @@
-execute as @s at @s run particle block_marker barrier ~ ~.5 ~ 0 0 0 0 1 force
+execute as @s at @s run particle minecraft:block_marker{block_state:{Name:"minecraft:barrier"}} ~ ~.5 ~ 0 0 0 0 1 force
 execute as @s at @s run playsound minecraft:entity.ender_dragon.shoot player @a[distance=..20] ~ ~ ~ 10 0.0
 tellraw @p ["",{"text":"You don't have enough xp","color":"dark_red"},"(",{"text":"xp needed: ","italic":true},{"score":{"name":"@s","objective":"XP"},"italic":true,"color":"aqua","hoverEvent":{"action":"show_text","contents":["If this seems like too much, try switching the order of the items"]}},")"]

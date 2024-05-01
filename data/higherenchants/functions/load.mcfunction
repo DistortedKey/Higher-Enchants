@@ -1,3 +1,5 @@
+scoreboard objectives add Echo dummy
+
 # create enchantment levels
 scoreboard objectives add mendinglvl dummy
 scoreboard objectives add unbreakinglvl dummy

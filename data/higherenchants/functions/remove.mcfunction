@@ -36,8 +36,6 @@ scoreboard objectives remove fortunelvl
 scoreboard objectives remove luckOfTheSealvl
 scoreboard objectives remove lurelvl
 
-scoreboard objectives remove rule
-
 scoreboard objectives remove itemId
 
 scoreboard objectives remove curseOfVanishinglvl
