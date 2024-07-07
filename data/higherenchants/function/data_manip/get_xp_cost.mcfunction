@@ -38,12 +38,15 @@ execute as @s at @s unless entity @s[tag=silk] unless entity @s[tag=!tool,tag=!b
 execute as @s at @s if entity @s[nbt={Item:{id:"minecraft:fishing_rod"}},tag=!book] if score @s luckOfTheSealvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] luckOfTheSealvl run scoreboard players add @s XP 5
 execute as @s at @s if entity @s[nbt={Item:{id:"minecraft:fishing_rod"}},tag=!book] if score @s lurelvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] lurelvl run scoreboard players add @s XP 5
 
-execute as @s at @s unless entity @s[tag=!universal] if score @s curseOfVanishinglvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] curseOfVanishinglvl run scoreboard players add @s XP 5
-execute as @s at @s unless entity @s[tag=!armor] if score @s curseOfBindinglvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] curseOfBindinglvl run scoreboard players add @s XP 5
-execute as @s at @s if score @s infinitylvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] infinitylvl run scoreboard players add @s XP 5
-execute as @s at @s if score @s multishotlvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] multishotlvl run scoreboard players add @s XP 5
-execute as @s at @s unless entity @s[tag=fortune] if score @s silkTouchlvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] silkTouchlvl run scoreboard players add @s XP 5
+execute as @s at @s unless entity @s[tag=!universal,tag=!book] if score @s curseOfVanishinglvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] curseOfVanishinglvl run scoreboard players add @s XP 5
+execute as @s at @s unless entity @s[tag=!armor,tag=!book] if score @s curseOfBindinglvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] curseOfBindinglvl run scoreboard players add @s XP 5
+execute as @s at @s if entity @s[nbt={Item:{id:"minecraft:bow"}},tag=!book] if score @s infinitylvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] infinitylvl run scoreboard players add @s XP 5
+execute as @s at @s if entity @s[nbt={Item:{id:"minecraft:crossbow"}},tag=!book] if score @s multishotlvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] multishotlvl run scoreboard players add @s XP 5
+execute as @s at @s unless entity @s[tag=fortune,tag=tool,tag=!book] if score @s silkTouchlvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] silkTouchlvl run scoreboard players add @s XP 5
 
+execute as @s at @s if entity @s[nbt={Item:{id:"minecraft:mace"}},tag=!book] if score @s breachlvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] breachlvl run scoreboard players add @s XP 5
+execute as @s at @s if entity @s[nbt={Item:{id:"minecraft:mace"}},tag=!book] if score @s densitylvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] densitylvl run scoreboard players add @s XP 5
+execute as @s at @s if entity @s[nbt={Item:{id:"minecraft:mace"}},tag=!book] if score @s windBurstlvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] windBurstlvl run scoreboard players add @s XP 5
 
 execute as @s[scores={mendinglvl=1..}] at @s if score @s mendinglvl < max mendinglvl if score @s mendinglvl = @e[type=item,tag=second,distance=.0001..1.5,limit=1] mendinglvl run scoreboard players add @s XP 10
 execute as @s[scores={unbreakinglvl=1..}] at @s if score @s unbreakinglvl < max unbreakinglvl if score @s unbreakinglvl = @e[type=item,tag=second,distance=.0001..1.5,limit=1] unbreakinglvl run scoreboard players add @s XP 10
@@ -83,3 +86,7 @@ execute as @s[scores={quickChargelvl=1..}] at @s if score @s quickChargelvl < ma
 execute as @s[scores={fortunelvl=1..}] at @s if score @s fortunelvl < max fortunelvl if score @s fortunelvl = @e[type=item,tag=second,distance=.0001..1.5,limit=1] fortunelvl run scoreboard players add @s XP 10
 execute as @s[scores={luckOfTheSealvl=1..}] at @s if score @s luckOfTheSealvl < max luckOfTheSealvl if score @s luckOfTheSealvl = @e[type=item,tag=second,distance=.0001..1.5,limit=1] luckOfTheSealvl run scoreboard players add @s XP 10
 execute as @s[scores={lurelvl=1..}] at @s if score @s lurelvl < max lurelvl if score @s lurelvl = @e[type=item,tag=second,distance=.0001..1.5,limit=1] lurelvl run scoreboard players add @s XP 10
+
+execute as @s[scores={breachlvl=1..}] at @s if score @s breachlvl < max breachlvl if score @s breachlvl = @e[type=item,tag=second,distance=.0001..1.5,limit=1] breachlvl run scoreboard players add @s XP 10
+execute as @s[scores={densitylvl=1..}] at @s if score @s densitylvl < max densitylvl if score @s densitylvl = @e[type=item,tag=second,distance=.0001..1.5,limit=1] densitylvl run scoreboard players add @s XP 10
+execute as @s[scores={windBurstlvl=1..}] at @s if score @s windBurstlvl < max windBurstlvl if score @s windBurstlvl = @e[type=item,tag=second,distance=.0001..1.5,limit=1] windBurstlvl run scoreboard players add @s XP 10

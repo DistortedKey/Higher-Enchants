@@ -39,6 +39,10 @@ scoreboard objectives add fortunelvl dummy
 scoreboard objectives add luckOfTheSealvl dummy
 scoreboard objectives add lurelvl dummy
 
+scoreboard objectives add breachlvl dummy
+scoreboard objectives add densitylvl dummy
+scoreboard objectives add windBurstlvl dummy
+
 # objective for rules
 scoreboard objectives add rule dummy
 scoreboard players set true rule 1

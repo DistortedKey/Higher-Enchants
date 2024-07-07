@@ -26,7 +26,7 @@ execute as @s store result score @s impalinglvl run data get entity @s Item.comp
 execute as @s store result score @s knockbacklvl run data get entity @s Item.components."minecraft:stored_enchantments".levels."minecraft:knockback"
 execute as @s store result score @s sharpnesslvl run data get entity @s Item.components."minecraft:stored_enchantments".levels."minecraft:sharpness"
 execute as @s store result score @s smitelvl run data get entity @s Item.components."minecraft:stored_enchantments".levels."minecraft:smite"
-execute as @s store result score @s sweepingEdgelvl run data get entity @s Item.components."minecraft:stored_enchantments".levels."minecraft:sweeping"
+execute as @s store result score @s sweepingEdgelvl run data get entity @s Item.components."minecraft:stored_enchantments".levels."minecraft:sweeping_edge"
 
 # ranged enchants
 execute as @s store result score @s channelinglvl run data get entity @s Item.components."minecraft:stored_enchantments".levels."minecraft:channeling"
@@ -43,6 +43,11 @@ execute as @s store result score @s quickChargelvl run data get entity @s Item.c
 execute as @s store result score @s fortunelvl run data get entity @s Item.components."minecraft:stored_enchantments".levels."minecraft:fortune"
 execute as @s store result score @s luckOfTheSealvl run data get entity @s Item.components."minecraft:stored_enchantments".levels."minecraft:luck_of_the_sea"
 execute as @s store result score @s lurelvl run data get entity @s Item.components."minecraft:stored_enchantments".levels."minecraft:lure"
+
+# mace enchants
+execute as @s store result score @s breachlvl run data get entity @s Item.components."minecraft:stored_enchantments".levels."minecraft:breach"
+execute as @s store result score @s densitylvl run data get entity @s Item.components."minecraft:stored_enchantments".levels."minecraft:density"
+execute as @s store result score @s windBurstlvl run data get entity @s Item.components."minecraft:stored_enchantments".levels."minecraft:wind_burst"
 
 # not higher enchants
 execute as @s store result score @s curseOfVanishinglvl run data get entity @s Item.components."minecraft:stored_enchantments".levels."minecraft:vanishing_curse"

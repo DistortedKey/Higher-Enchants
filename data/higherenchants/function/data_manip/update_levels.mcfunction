@@ -38,3 +38,7 @@ execute as @s[scores={quickChargelvl=1..}] at @s if score @s quickChargelvl < ma
 execute as @s[scores={fortunelvl=1..}] at @s if score @s fortunelvl < max fortunelvl if score @s fortunelvl = @e[type=item,tag=second,distance=.0001..1.5,limit=1] fortunelvl run scoreboard players add @s fortunelvl 1
 execute as @s[scores={luckOfTheSealvl=1..}] at @s if score @s luckOfTheSealvl < max luckOfTheSealvl if score @s luckOfTheSealvl = @e[type=item,tag=second,distance=.0001..1.5,limit=1] luckOfTheSealvl run scoreboard players add @s luckOfTheSealvl 1
 execute as @s[scores={lurelvl=1..}] at @s if score @s lurelvl < max lurelvl if score @s lurelvl = @e[type=item,tag=second,distance=.0001..1.5,limit=1] lurelvl run scoreboard players add @s lurelvl 1
+
+execute as @s[scores={breachlvl=1..}] at @s if score @s breachlvl < max breachlvl if score @s breachlvl = @e[type=item,tag=second,distance=.0001..1.5,limit=1] breachlvl run scoreboard players add @s breachlvl 1
+execute as @s[scores={densitylvl=1..}] at @s if score @s densitylvl < max densitylvl if score @s densitylvl = @e[type=item,tag=second,distance=.0001..1.5,limit=1] densitylvl run scoreboard players add @s densitylvl 1
+execute as @s[scores={windBurstlvl=1..}] at @s if score @s windBurstlvl < max windBurstlvl if score @s windBurstlvl = @e[type=item,tag=second,distance=.0001..1.5,limit=1] windBurstlvl run scoreboard players add @s windBurstlvl 1

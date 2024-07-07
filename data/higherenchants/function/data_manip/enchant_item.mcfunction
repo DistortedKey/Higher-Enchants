@@ -23,7 +23,7 @@ execute as @s store result entity @s[scores={impalinglvl=1..}] Item.components."
 execute as @s store result entity @s[scores={knockbacklvl=1..}] Item.components."minecraft:enchantments".levels."minecraft:knockback" short 1 run scoreboard players get @s knockbacklvl
 execute as @s store result entity @s[scores={sharpnesslvl=1..}] Item.components."minecraft:enchantments".levels."minecraft:sharpness" short 1 run scoreboard players get @s sharpnesslvl
 execute as @s store result entity @s[scores={smitelvl=1..}] Item.components."minecraft:enchantments".levels."minecraft:smite" short 1 run scoreboard players get @s smitelvl
-execute as @s store result entity @s[scores={sweepingEdgelvl=1..}] Item.components."minecraft:enchantments".levels."minecraft:sweeping" short 1 run scoreboard players get @s sweepingEdgelvl
+execute as @s store result entity @s[scores={sweepingEdgelvl=1..}] Item.components."minecraft:enchantments".levels."minecraft:sweeping_edge" short 1 run scoreboard players get @s sweepingEdgelvl
 
 execute as @s store result entity @s[scores={channelinglvl=1..}] Item.components."minecraft:enchantments".levels."minecraft:channeling" short 1 run scoreboard players get @s channelinglvl
 execute as @s store result entity @s[scores={flamelvl=1..}] Item.components."minecraft:enchantments".levels."minecraft:flame" short 1 run scoreboard players get @s flamelvl
@@ -38,6 +38,10 @@ execute as @s store result entity @s[scores={quickChargelvl=1..}] Item.component
 execute as @s store result entity @s[scores={fortunelvl=1..}] Item.components."minecraft:enchantments".levels."minecraft:fortune" short 1 run scoreboard players get @s fortunelvl
 execute as @s store result entity @s[scores={luckOfTheSealvl=1..}] Item.components."minecraft:enchantments".levels."minecraft:luck_of_the_sea" short 1 run scoreboard players get @s luckOfTheSealvl
 execute as @s store result entity @s[scores={lurelvl=1..}] Item.components."minecraft:enchantments".levels."minecraft:lure" short 1 run scoreboard players get @s lurelvl
+
+execute as @s store result entity @s[scores={breachlvl=1..}] Item.components."minecraft:enchantments".levels."minecraft:breach" short 1 run scoreboard players get @s breachlvl
+execute as @s store result entity @s[scores={densitylvl=1..}] Item.components."minecraft:enchantments".levels."minecraft:density" short 1 run scoreboard players get @s densitylvl
+execute as @s store result entity @s[scores={windBurstlvl=1..}] Item.components."minecraft:enchantments".levels."minecraft:wind_burst" short 1 run scoreboard players get @s windBurstlvl
 
 
 # compares the current item(item1) to the second item(item2). if the second item has a higher enchantment(excluding item speific enchants) then enchant the first item with the level of the second
@@ -64,7 +68,7 @@ execute as @s at @s unless entity @s[nbt=!{Item:{id:"minecraft:trident"}},tag=!b
 execute as @s at @s unless entity @s[tag=!weapon,nbt=!{Item:{id:"minecraft:stick"}},tag=!book] if score @s knockbacklvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] knockbacklvl store result entity @s Item.components."minecraft:enchantments".levels."minecraft:knockback" short 1 run scoreboard players get @e[type=item,tag=second,distance=.0001..1.5,limit=1] knockbacklvl
 execute as @s at @s unless entity @s[tag=!weapon,tag=!book] if score @s sharpnesslvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] sharpnesslvl store result entity @s Item.components."minecraft:enchantments".levels."minecraft:sharpness" short 1 run scoreboard players get @e[type=item,tag=second,distance=.0001..1.5,limit=1] sharpnesslvl
 execute as @s at @s unless entity @s[tag=!weapon,tag=!book] if score @s smitelvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] smitelvl store result entity @s Item.components."minecraft:enchantments".levels."minecraft:smite" short 1 run scoreboard players get @e[type=item,tag=second,distance=.0001..1.5,limit=1] smitelvl
-execute as @s at @s unless entity @s[tag=!sword,tag=!book] if score @s sweepingEdgelvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] sweepingEdgelvl store result entity @s Item.components."minecraft:enchantments".levels."minecraft:sweeping" short 1 run scoreboard players get @e[type=item,tag=second,distance=.0001..1.5,limit=1] sweepingEdgelvl
+execute as @s at @s unless entity @s[tag=!sword,tag=!book] if score @s sweepingEdgelvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] sweepingEdgelvl store result entity @s Item.components."minecraft:enchantments".levels."minecraft:sweeping_edge" short 1 run scoreboard players get @e[type=item,tag=second,distance=.0001..1.5,limit=1] sweepingEdgelvl
 
 execute as @s at @s unless entity @s[tag=riptide] unless entity @s[nbt=!{Item:{id:"minecraft:trident"}},tag=!book] if score @s channelinglvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] channelinglvl store result entity @s Item.components."minecraft:enchantments".levels."minecraft:channeling" short 1 run scoreboard players get @e[type=item,tag=second,distance=.0001..1.5,limit=1] channelinglvl
 execute as @s at @s unless entity @s[tag=!bow,tag=!book] if score @s flamelvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] flamelvl store result entity @s Item.components."minecraft:enchantments".levels."minecraft:flame" short 1 run scoreboard players get @e[type=item,tag=second,distance=.0001..1.5,limit=1] flamelvl
@@ -80,20 +84,23 @@ execute as @s at @s unless entity @s[tag=silk] unless entity @s[tag=!tool,tag=!b
 execute as @s at @s if entity @s[nbt={Item:{id:"minecraft:fishing_rod"}},tag=!book] if score @s luckOfTheSealvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] luckOfTheSealvl store result entity @s Item.components."minecraft:enchantments".levels."minecraft:luck_of_the_sea" short 1 run scoreboard players get @e[type=item,tag=second,distance=.0001..1.5,limit=1] luckOfTheSealvl
 execute as @s at @s if entity @s[nbt={Item:{id:"minecraft:fishing_rod"}},tag=!book] if score @s lurelvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] lurelvl store result entity @s Item.components."minecraft:enchantments".levels."minecraft:lure" short 1 run scoreboard players get @e[type=item,tag=second,distance=.0001..1.5,limit=1] lurelvl
 
+execute as @s at @s if entity @s[nbt={Item:{id:"minecraft:mace"}},tag=!book] if score @s breachlvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] breachlvl store result entity @s Item.components."minecraft:enchantments".levels."minecraft:breach" short 1 run scoreboard players get @e[type=item,tag=second,distance=.0001..1.5,limit=1] breachlvl
+execute as @s at @s if entity @s[nbt={Item:{id:"minecraft:mace"}},tag=!book] if score @s densitylvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] densitylvl store result entity @s Item.components."minecraft:enchantments".levels."minecraft:density" short 1 run scoreboard players get @e[type=item,tag=second,distance=.0001..1.5,limit=1] densitylvl
+execute as @s at @s if entity @s[nbt={Item:{id:"minecraft:mace"}},tag=!book] if score @s windBurstlvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] windBurstlvl store result entity @s Item.components."minecraft:enchantments".levels."minecraft:wind_burst" short 1 run scoreboard players get @e[type=item,tag=second,distance=.0001..1.5,limit=1] windBurstlvl
 
 
 execute as @s at @s unless entity @s[tag=!universal] if score @s curseOfVanishinglvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] curseOfVanishinglvl store result entity @s Item.components."minecraft:enchantments".levels."minecraft:vanishing_curse" short 1 run scoreboard players get @e[type=item,tag=second,distance=.0001..1.5,limit=1] curseOfVanishinglvl
 execute as @s at @s unless entity @s[tag=!armor] if score @s curseOfBindinglvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] curseOfBindinglvl store result entity @s Item.components."minecraft:enchantments".levels."minecraft:binding_curse" short 1 run scoreboard players get @e[type=item,tag=second,distance=.0001..1.5,limit=1] curseOfBindinglvl
-execute as @s at @s if score @s infinitylvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] infinitylvl store result entity @s Item.components."minecraft:enchantments".levels."minecraft:infinity" short 1 run scoreboard players get @e[type=item,tag=second,distance=.0001..1.5,limit=1] infinitylvl
-execute as @s at @s if score @s multishotlvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] multishotlvl store result entity @s Item.components."minecraft:enchantments".levels."minecraft:multishot" short 1 run scoreboard players get @e[type=item,tag=second,distance=.0001..1.5,limit=1] multishotlvl
-execute as @s at @s unless entity @s[tag=fortune] if score @s silkTouchlvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] silkTouchlvl store result entity @s Item.components."minecraft:enchantments".levels."minecraft:silk_touch" short 1 run scoreboard players get @e[type=item,tag=second,distance=.0001..1.5,limit=1] silkTouchlvl
+execute as @s at @s if entity @s[nbt={Item:{id:"minecraft:bow"}}] if score @s infinitylvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] infinitylvl store result entity @s Item.components."minecraft:enchantments".levels."minecraft:infinity" short 1 run scoreboard players get @e[type=item,tag=second,distance=.0001..1.5,limit=1] infinitylvl
+execute as @s at @s if entity @s[nbt={Item:{id:"minecraft:crossbow"}}] if score @s multishotlvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] multishotlvl store result entity @s Item.components."minecraft:enchantments".levels."minecraft:multishot" short 1 run scoreboard players get @e[type=item,tag=second,distance=.0001..1.5,limit=1] multishotlvl
+execute as @s at @s unless entity @s[tag=!tool] unless entity @s[tag=fortune] if score @s silkTouchlvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] silkTouchlvl store result entity @s Item.components."minecraft:enchantments".levels."minecraft:silk_touch" short 1 run scoreboard players get @e[type=item,tag=second,distance=.0001..1.5,limit=1] silkTouchlvl
 
 
 # show completion
 # display particle
 execute as @s at @s run particle minecraft:enchanted_hit ~ ~ ~ 0.5 0.5 0.5 0.75 250
 # kill the second Item
-execute as @s at @s run kill @e[type=item,tag=second,distance=.001..1.5, limit=1]
+execute as @s at @s run kill @e[type=item,tag=second,distance=.001..1.5,limit=1]
 # remove tag to allow the item to be enchanted again without having to pick it up and drop it again
 execute as @s run tag @s remove started
 # play anvil success sound to the player
