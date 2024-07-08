@@ -55,7 +55,7 @@ scoreboard objectives add itemId dummy
 scoreboard objectives add XP dummy
 scoreboard players set zero XP 0
 
-execute unless score init XP matches 1 run function higherenchants:starters/initialize_max
+function higherenchants:starters/initialize_max
 
 # non higher enchantment objectives
 scoreboard objectives add curseOfVanishinglvl dummy
