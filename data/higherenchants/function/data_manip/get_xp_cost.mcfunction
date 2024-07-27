@@ -3,8 +3,8 @@ execute as @s at @s unless entity @s[tag=!universal,tag=!book] if score @s mendi
 execute as @s at @s unless entity @s[tag=!universal,tag=!book] if score @s unbreakinglvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] unbreakinglvl run scoreboard players add @s XP 5
 execute as @s at @s unless entity @s[tag=!helmet,tag=!book] if score @s aquaAffinitylvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] aquaAffinitylvl run scoreboard players add @s XP 5
 execute as @s at @s unless entity @s[tag=!armor,tag=!book] if score @s blastProtectionlvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] blastProtectionlvl run scoreboard players add @s XP 5
-execute as @s at @s unless entity @s[tag=frost] if score @s depthStriderlvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] depthStriderlvl run scoreboard players add @s XP 5
-execute as @s at @s unless entity @s[tag=depth] if score @s frostWalkerlvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] frostWalkerlvl run scoreboard players add @s XP 5
+execute as @s at @s unless entity @s[tag=frost] unless entity @s[tag=!boots,tag=!book] if score @s depthStriderlvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] depthStriderlvl run scoreboard players add @s XP 5
+execute as @s at @s unless entity @s[tag=depth] unless entity @s[tag=!boots,tag=!book] if score @s frostWalkerlvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] frostWalkerlvl run scoreboard players add @s XP 5
 execute as @s at @s unless entity @s[tag=!boots,tag=!book] if score @s featherFallinglvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] featherFallinglvl run scoreboard players add @s XP 5
 execute as @s at @s unless entity @s[tag=!armor,tag=!book] if score @s fireProtectionlvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] fireProtectionlvl run scoreboard players add @s XP 5
 execute as @s at @s unless entity @s[tag=!armor,tag=!book] if score @s projectileProtectionlvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] projectileProtectionlvl run scoreboard players add @s XP 5
@@ -12,7 +12,7 @@ execute as @s at @s unless entity @s[tag=!armor,tag=!book] if score @s protectio
 execute as @s at @s unless entity @s[tag=!helmet,tag=!book] if score @s respirationlvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] respirationlvl run scoreboard players add @s XP 5
 execute as @s at @s unless entity @s[tag=!boots,tag=!book] if score @s soulSpeedlvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] soulSpeedlvl run scoreboard players add @s XP 5
 execute as @s at @s unless entity @s[tag=!armor,tag=!book] if score @s thornslvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] thornslvl run scoreboard players add @s XP 5
-execute as @s at @s unless entity @s[tag=!boots,tag=!book] if score @s swiftSneaklvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] swiftSneaklvl run scoreboard players add @s XP 5
+execute as @s at @s unless entity @s[tag=!leggings,tag=!book] if score @s swiftSneaklvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] swiftSneaklvl run scoreboard players add @s XP 5
 
 execute as @s at @s unless entity @s[tag=!weapon,tag=!book] if score @s baneOfArthropodslvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] baneOfArthropodslvl run scoreboard players add @s XP 5
 execute as @s at @s unless entity @s[tag=!tool,tag=!book] if score @s efficiencylvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] efficiencylvl run scoreboard players add @s XP 5
@@ -41,7 +41,7 @@ execute as @s at @s if entity @s[nbt={Item:{id:"minecraft:fishing_rod"}},tag=!bo
 execute as @s at @s unless entity @s[tag=!universal,tag=!book] if score @s curseOfVanishinglvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] curseOfVanishinglvl run scoreboard players add @s XP 5
 execute as @s at @s unless entity @s[tag=!armor,tag=!book] if score @s curseOfBindinglvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] curseOfBindinglvl run scoreboard players add @s XP 5
 execute as @s at @s if entity @s[nbt={Item:{id:"minecraft:bow"}},tag=!book] if score @s infinitylvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] infinitylvl run scoreboard players add @s XP 5
-execute as @s at @s if entity @s[nbt={Item:{id:"minecraft:crossbow"}},tag=!book] if score @s multishotlvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] multishotlvl run scoreboard players add @s XP 5
+execute as @s at @s unless entity @s[nbt=!{Item:{id:"minecraft:crossbow"}},nbt=!{Item:{id:"minecraft:bow"}},tag=!book] if score @s multishotlvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] multishotlvl run scoreboard players add @s XP 5
 execute as @s at @s unless entity @s[tag=fortune] unless entity @s[tag=!tool,tag=!book] if score @s silkTouchlvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] silkTouchlvl run scoreboard players add @s XP 5
 
 execute as @s at @s if entity @s[nbt={Item:{id:"minecraft:mace"}},tag=!book] if score @s breachlvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] breachlvl run scoreboard players add @s XP 5
