@@ -10,7 +10,7 @@ execute if score #echo Echo matches 2 run tellraw @s {text:"Higher Enchants",bol
 
 scoreboard players set echo Echo -1
 function keeptotem:echo
-execute if score #echo Echo matches 3 run tellraw @s ["","\n",{"text":"KeepInventoryTotem","bold":true,"color":"gold","clickEvent":{"action":"run_command","value":"/function keeptotem:config/totem_menu"}}]
+execute if score #echo Echo matches 3 run tellraw @s {text:"KeepInventoryTotem",bold:true,color:"gold",click_event:{action:"run_command",command:"/function keeptotem:config/totem_menu"},hover_event:{action:"show_text",value:[{text:"Open KeepInventoryTotem Config"}]}}
 
 scoreboard players set echo Echo -1
 function sethome:echo
