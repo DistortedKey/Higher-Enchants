@@ -24,6 +24,7 @@ scoreboard objectives add knockbacklvl dummy
 scoreboard objectives add sharpnesslvl dummy
 scoreboard objectives add smitelvl dummy
 scoreboard objectives add sweepingEdgelvl dummy
+scoreboard objectives add lungelvl dummy
 
 scoreboard objectives add channelinglvl dummy
 scoreboard objectives add flamelvl dummy

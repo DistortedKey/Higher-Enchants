@@ -22,6 +22,7 @@ execute unless score max knockbacklvl matches 1.. run scoreboard players set max
 execute unless score max sharpnesslvl matches 1.. run scoreboard players set max sharpnesslvl 10
 execute unless score max smitelvl matches 1.. run scoreboard players set max smitelvl 10
 execute unless score max sweepingEdgelvl matches 1.. run scoreboard players set max sweepingEdgelvl 10
+execute unless score max lungelvl matches 1.. run scoreboard players set max lungelvl 10
 
 
 execute unless score max channelinglvl matches 1.. run scoreboard players set max channelinglvl 2

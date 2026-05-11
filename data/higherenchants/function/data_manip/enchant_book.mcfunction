@@ -24,6 +24,7 @@ execute as @s store result entity @s[scores={knockbacklvl=1..}] Item.components.
 execute as @s store result entity @s[scores={sharpnesslvl=1..}] Item.components."minecraft:stored_enchantments"."minecraft:sharpness" short 1 run scoreboard players get @s sharpnesslvl
 execute as @s store result entity @s[scores={smitelvl=1..}] Item.components."minecraft:stored_enchantments"."minecraft:smite" short 1 run scoreboard players get @s smitelvl
 execute as @s store result entity @s[scores={sweepingEdgelvl=1..}] Item.components."minecraft:stored_enchantments"."minecraft:sweeping_edge" short 1 run scoreboard players get @s sweepingEdgelvl
+execute as @s store result entity @s[scores={lungelvl=1..}] Item.components."minecraft:stored_enchantments"."minecraft:lunge" short 1 run scoreboard players get @s lungelvl
 
 execute as @s store result entity @s[scores={channelinglvl=1..}] Item.components."minecraft:stored_enchantments"."minecraft:channeling" short 1 run scoreboard players get @s channelinglvl
 execute as @s store result entity @s[scores={flamelvl=1..}] Item.components."minecraft:stored_enchantments"."minecraft:flame" short 1 run scoreboard players get @s flamelvl
@@ -70,6 +71,7 @@ execute as @s at @s if score @s knockbacklvl < @e[type=item,tag=second,distance=
 execute as @s at @s if score @s sharpnesslvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] sharpnesslvl store result entity @s Item.components."minecraft:stored_enchantments"."minecraft:sharpness" short 1 run scoreboard players get @e[type=item,tag=second,distance=.0001..1.5,limit=1] sharpnesslvl
 execute as @s at @s if score @s smitelvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] smitelvl store result entity @s Item.components."minecraft:stored_enchantments"."minecraft:smite" short 1 run scoreboard players get @e[type=item,tag=second,distance=.0001..1.5,limit=1] smitelvl
 execute as @s at @s if score @s sweepingEdgelvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] sweepingEdgelvl store result entity @s Item.components."minecraft:stored_enchantments"."minecraft:sweeping_edge" short 1 run scoreboard players get @e[type=item,tag=second,distance=.0001..1.5,limit=1] sweepingEdgelvl
+execute as @s at @s if score @s lungelvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] lungelvl store result entity @s Item.components."minecraft:stored_enchantments"."minecraft:lunge" short 1 run scoreboard players get @e[type=item,tag=second,distance=.0001..1.5,limit=1] lungelvl
 
 execute as @s at @s unless entity @s[tag=riptide] if score @s channelinglvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] channelinglvl store result entity @s Item.components."minecraft:stored_enchantments"."minecraft:channeling" short 1 run scoreboard players get @e[type=item,tag=second,distance=.0001..1.5,limit=1] channelinglvl
 execute as @s at @s if score @s flamelvl < @e[type=item,tag=second,distance=.0001..1.5,limit=1] flamelvl store result entity @s Item.components."minecraft:stored_enchantments"."minecraft:flame" short 1 run scoreboard players get @e[type=item,tag=second,distance=.0001..1.5,limit=1] flamelvl

@@ -24,6 +24,7 @@ execute as @s[scores={knockbacklvl=1..}] at @s if score @s knockbacklvl < max kn
 execute as @s[scores={sharpnesslvl=1..}] at @s if score @s sharpnesslvl < max sharpnesslvl if score @s sharpnesslvl = @e[type=item,tag=second,distance=.0001..1.5,limit=1] sharpnesslvl run scoreboard players add @s sharpnesslvl 1
 execute as @s[scores={smitelvl=1..}] at @s if score @s smitelvl < max smitelvl if score @s smitelvl = @e[type=item,tag=second,distance=.0001..1.5,limit=1] smitelvl run scoreboard players add @s smitelvl 1
 execute as @s[scores={sweepingEdgelvl=1..}] at @s if score @s sweepingEdgelvl < max sweepingEdgelvl if score @s sweepingEdgelvl = @e[type=item,tag=second,distance=.0001..1.5,limit=1] sweepingEdgelvl run scoreboard players add @s sweepingEdgelvl 1
+execute as @s[scores={lungelvl=1..}] at @s if score @s lungelvl < max lungelvl if score @s lungelvl = @e[type=item,tag=second,distance=.0001..1.5,limit=1] lungelvl run scoreboard players add @s lungelvl 1
 
 execute as @s[scores={channelinglvl=1..}] at @s if score @s channelinglvl < max channelinglvl if score @s channelinglvl = @e[type=item,tag=second,distance=.0001..1.5,limit=1] channelinglvl run scoreboard players add @s channelinglvl 1
 execute as @s[scores={flamelvl=1..}] at @s if score @s flamelvl < max flamelvl if score @s flamelvl = @e[type=item,tag=second,distance=.0001..1.5,limit=1] flamelvl run scoreboard players add @s flamelvl 1

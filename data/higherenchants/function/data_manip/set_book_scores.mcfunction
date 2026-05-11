@@ -27,6 +27,7 @@ execute as @s store result score @s knockbacklvl run data get entity @s Item.com
 execute as @s store result score @s sharpnesslvl run data get entity @s Item.components."minecraft:stored_enchantments"."minecraft:sharpness"
 execute as @s store result score @s smitelvl run data get entity @s Item.components."minecraft:stored_enchantments"."minecraft:smite"
 execute as @s store result score @s sweepingEdgelvl run data get entity @s Item.components."minecraft:stored_enchantments"."minecraft:sweeping_edge"
+execute as @s store result score @s lungelvl run data get entity @s Item.components."minecraft:stored_enchantments"."minecraft:lunge"
 
 # ranged enchants
 execute as @s store result score @s channelinglvl run data get entity @s Item.components."minecraft:stored_enchantments"."minecraft:channeling"

@@ -160,15 +160,52 @@ execute as @s[nbt={Item:{id:"minecraft:trident"}}] run scoreboard players set @s
 
 execute as @s[nbt={Item:{id:"minecraft:mace"}}] run scoreboard players set @s itemId 68
 
+# copper items added 1.21.9
+execute as @s[nbt={Item:{id:"minecraft:copper_sword"}}] run tag @s add sword
+execute as @s[nbt={Item:{id:"minecraft:copper_sword"}}] run scoreboard players set @s itemId 69
+execute as @s[nbt={Item:{id:"minecraft:copper_axe"}}] run tag @s add axe
+execute as @s[nbt={Item:{id:"minecraft:copper_axe"}}] run scoreboard players set @s itemId 70
+execute as @s[nbt={Item:{id:"minecraft:copper_pickaxe"}}] run tag @s add pickaxe
+execute as @s[nbt={Item:{id:"minecraft:copper_pickaxe"}}] run scoreboard players set @s itemId 71
+execute as @s[nbt={Item:{id:"minecraft:copper_shovel"}}] run tag @s add shovel
+execute as @s[nbt={Item:{id:"minecraft:copper_shovel"}}] run scoreboard players set @s itemId 72
+execute as @s[nbt={Item:{id:"minecraft:copper_hoe"}}] run tag @s add hoe
+execute as @s[nbt={Item:{id:"minecraft:copper_hoe"}}] run scoreboard players set @s itemId 73
+execute as @s[nbt={Item:{id:"minecraft:copper_helmet"}}] run tag @s add helmet
+execute as @s[nbt={Item:{id:"minecraft:copper_helmet"}}] run scoreboard players set @s itemId 74
+execute as @s[nbt={Item:{id:"minecraft:copper_chestplate"}}] run tag @s add chestplate
+execute as @s[nbt={Item:{id:"minecraft:copper_chestplate"}}] run scoreboard players set @s itemId 75
+execute as @s[nbt={Item:{id:"minecraft:copper_leggings"}}] run tag @s add leggings
+execute as @s[nbt={Item:{id:"minecraft:copper_leggings"}}] run scoreboard players set @s itemId 76
+execute as @s[nbt={Item:{id:"minecraft:copper_boots"}}] run tag @s add boots
+execute as @s[nbt={Item:{id:"minecraft:copper_boots"}}] run scoreboard players set @s itemId 77
+
+
+# spears
+execute as @s[nbt={Item:{id:"minecraft:copper_spear"}}] run tag @s add spear
+execute as @s[nbt={Item:{id:"minecraft:copper_spear"}}] run scoreboard players set @s itemId 78
+execute as @s[nbt={Item:{id:"minecraft:wooden_spear"}}] run tag @s add spear
+execute as @s[nbt={Item:{id:"minecraft:wooden_spear"}}] run scoreboard players set @s itemId 79
+execute as @s[nbt={Item:{id:"minecraft:stone_spear"}}] run tag @s add spear
+execute as @s[nbt={Item:{id:"minecraft:stone_spear"}}] run scoreboard players set @s itemId 80
+execute as @s[nbt={Item:{id:"minecraft:golden_spear"}}] run tag @s add spear
+execute as @s[nbt={Item:{id:"minecraft:golden_spear"}}] run scoreboard players set @s itemId 81
+execute as @s[nbt={Item:{id:"minecraft:iron_spear"}}] run tag @s add spear
+execute as @s[nbt={Item:{id:"minecraft:iron_spear"}}] run scoreboard players set @s itemId 82
+execute as @s[nbt={Item:{id:"minecraft:diamond_spear"}}] run tag @s add spear
+execute as @s[nbt={Item:{id:"minecraft:diamond_spear"}}] run scoreboard players set @s itemId 83
+execute as @s[nbt={Item:{id:"minecraft:netherite_spear"}}] run tag @s add spear
+execute as @s[nbt={Item:{id:"minecraft:netherite_spear"}}] run scoreboard players set @s itemId 84
+
 
 # tag armors for prot, thorns etc
 execute as @s unless entity @s[tag=!helmet,tag=!chestplate,tag=!leggings,tag=!boots] run tag @s add armor
 # tag weapons for sharp, smite etc
-execute as @s unless entity @s[tag=!sword,tag=!axe,nbt=!{Item:{id:"minecraft:trident"}}] run tag @s add weapon
+execute as @s unless entity @s[tag=!sword,tag=!axe,tag=!spear,nbt=!{Item:{id:"minecraft:trident"}}] run tag @s add weapon
 # tag tool items(for efficiancy, fortune, silk)
 execute as @s unless entity @s[tag=!hoe,tag=!axe,tag=!pickaxe,tag=!shovel] run tag @s add tool
 # tag items that can be enchanted with mending and unbreaking
-execute as @s unless entity @s[tag=!sword,tag=!axe,tag=!pickaxe,tag=!armor,tag=!shovel,tag=!hoe,tag=!bow,tag=!crossbow,nbt=!{Item:{id:"minecraft:flint_and_steel"}},nbt=!{Item:{id:"minecraft:fishing_rod"}},nbt=!{Item:{id:"minecraft:carrot_on_a_stick"}},nbt=!{Item:{id:"minecraft:shears"}},nbt=!{Item:{id:"minecraft:shield"}},nbt=!{Item:{id:"minecraft:trident"}},nbt=!{Item:{id:"minecraft:mace"}}] run tag @s add universal
+execute as @s unless entity @s[tag=!sword,tag=!axe,tag=!pickaxe,tag=!spear,tag=!armor,tag=!shovel,tag=!hoe,tag=!bow,tag=!crossbow,nbt=!{Item:{id:"minecraft:flint_and_steel"}},nbt=!{Item:{id:"minecraft:fishing_rod"}},nbt=!{Item:{id:"minecraft:carrot_on_a_stick"}},nbt=!{Item:{id:"minecraft:shears"}},nbt=!{Item:{id:"minecraft:shield"}},nbt=!{Item:{id:"minecraft:trident"}},nbt=!{Item:{id:"minecraft:mace"}}] run tag @s add universal
 
 # if an item is already tagged, then this one is the second
 execute as @s if entity @s[tag=universal] at @s if score @e[distance=.0001..1.5,tag=item,limit=1,sort=nearest] itemId = @s itemId run tag @s add second_item
